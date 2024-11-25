@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react"
 
-const WeatherDisplay = ({ weatherState }) => {
+const WeatherDisplay = ({ weatherData }) => {
   return (
     <div>
-        <p>Temperature : <span style={{color: weatherState.temperature > 20 ? "red" : "blue"}} >{weatherState.temperature}</span></p>
-        <p>Conditions : {weatherState.conditions}</p>
+      <p>
+        Temperature:{" "}
+        <span style={{ color: weatherData.temperature > 20 ? "red" : "blue" }}>
+          {weatherData.temperature}
+        </span>
+      </p>
+      <p>Conditions: {weatherData.conditions}</p>
     </div>
-  )
-}
+  );
+};
 
-export default WeatherDisplay
+export default WeatherDisplay;
